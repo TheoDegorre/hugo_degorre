@@ -1,0 +1,36 @@
+.contact-page-container {
+  display: flex;
+  justify-content: center;
+  height: 100dvh;
+  padding: 32px;
+
+
+  & .contact-figure-container {
+    width: 60dvw;
+    height: 80dvh;
+   
+
+    & #figure-img {
+      padding-left:32px;
+      width: auto;
+      height: 95%;
+    }
+  }
+
+  & .contact-page-description-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent-font-color);
+    position: absolute;
+    bottom: 5%;
+    right: 30%;
+    width: 20dvw;
+    height: 20dvh;
+  }
+}
+
+.contact-page-description-container > a:hover {
+  scale: 1.1;
+  text-decoration: underline;
+}

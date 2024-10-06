@@ -1,0 +1,12 @@
+.welcome-container {
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & #welcome-img {
+    height: 90%;
+    width: max-content
+  }
+}
