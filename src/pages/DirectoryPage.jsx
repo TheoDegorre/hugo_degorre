@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
 import DirectoryCard from "../components/DirectoryCard";
+import directorydata from "../directorydata";
 
 function DirectoryPage() {
-  const directoryList = useLoaderData();
+  const directoryList = directorydata;
   const [query, setQuery] = useState("");
 
   const directory = directoryList || [];
