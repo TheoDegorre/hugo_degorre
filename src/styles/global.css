@@ -10,7 +10,6 @@
 @import "./components_styles/_nav-bar.css";
 @import "./components_styles/_footer.css";
 @import "./components_styles/_directory-card.css";
-@import "./components_styles/_event-card.css";
 
 /* import font style */
 @import url("https://fonts.googleapis.com/css2?family=Zeyada&display=swap");
@@ -18,15 +17,15 @@
 
 :root {
   /* Background colors */
-  --light-bg-color: #fff9ed;
-  --dark-bg-color: #1c1402;
-  --gray-bg-color: #797d81;
-  --brown-bg-color: #c9b7ad;
+  --white-bg-color: oklch(90% 0.01 75);
+  --ligth-bg-color: oklch(60% 0.01 75);
+  --medium-bg-color: oklch(40% 0.01 75);
+  --dark-bg-color:oklch(20% 0.01 75);
 
   /* Font colors */
-  --light-font-color: #fff9ed;
-  --dark-font-color: #1c1402;
-  --accent-font-color: #7791d8;
+  --light-font-color: oklch(90% 0.01 75);
+  --dark-font-color: oklch(20% 0.01 75);
+  --accent-font-color:oklch(60% 0.01 75);
 
   /* Font style */
   --signature-font-style: "Zeyada", cursive;
@@ -43,8 +42,9 @@
   margin: 0;
   padding: 0;
   color: var(--dark-bg-color);
-  user-select: none;
+  /* user-select: none; */
   overflow-x: hidden;
+/* border: solid 1px black; */
 }
 
 /* * {
@@ -55,7 +55,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--primary-font-style);
-  background-color: var(--light-bg-color);
+  background-color: var(--white-bg-color);
+
 }
 
 h1 {

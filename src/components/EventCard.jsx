@@ -1,22 +1,35 @@
 import PropTypes from "prop-types";
 
-function EventCard({ title, date, city }) {
+function EventCard({ date, title, place, adress, city }) {
+
+  let fineDate = date.split(" ");
+  console.log(fineDate)
   
   return (
-    <section>
-      <h2 id="project-card-title">{title}</h2>
-      <div className="event-card-detail">
-          <h4 id="project-card-date">le {date}</h4>
-        <h4 id="project-card-title">{city}</h4>
+    <section className="event-card-container">
+
+      <div className="event-date-container">
+        <h2 id="event-card-day">{fineDate[0]}</h2>
+        <h4 id="event-card-date">{fineDate[1]} {fineDate[2]}</h4>
       </div>
+
+      <div className="event-detail-container">
+        <h2 id="event-card-title">{title}</h2>
+        <h4 id="event-card-subtitle">
+          {place} - {adress} - {city}
+        </h4>
+      </div>
+
     </section>
   );
 }
 
 EventCard.propTypes = {
   id: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  place: PropTypes.string.isRequired,
+  adress: PropTypes.string.isRequired,
   city: PropTypes.string.isRequired,
 };
 

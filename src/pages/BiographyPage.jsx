@@ -1,7 +1,12 @@
 import biography from "../assets/biography_page/hugo_biography.jpg";
+import background from "../assets/Vector.svg";
 
 function BiographyPage() {
   return (
+    <>
+      <div id="biography-background-container">
+        <img id="background" src={background} alt="" />
+      </div>
     <section className="biography-container">
       <figure className="biography-img-container">
         <img className="biography-img" src={biography} alt="" />
@@ -11,10 +16,12 @@ function BiographyPage() {
           C’est en 2016 qu’Hugo Degorre obtient son DEM d’accordéon dans la
           classe de Jean-Luc Manca au conservatoire de Grenoble.
           <br />
+          <br />
           Ayant fini ses études d’ingénieur à Grenoble et Karlsruhe en 2017, il
           intègre la HEAR de Strasbourg (Haute École des Arts du Rhin) dans la
           classe d’accordéon de Marie-Andrée Joerger, puis la Hochschule Musik
           Freiburg avec Teodoro Anzellotti où il obtient son Master en 2022.
+          <br />
           <br />
           Lors de masterclass, il bénéficie de l’enseignement de Claudio
           Jacomucci, Vincent Lhermet, Marko Kassl, Mie Miki et Raimondas
@@ -27,6 +34,7 @@ function BiographyPage() {
           Mulhouse au Palais des Fêtes de Strasbourg et en compagnie de la
           Philarmonie de Poche pour une série de concerts.
           <br />
+          <br />
           Il intègre en 2023 l’ensemble à géométrie variable Nebensonnen ainsi
           que la compagnie la Chambre à air, deux ensembles centrés sur le chant
           et l’opéra. Il s’est également produit plusieurs fois au festival
@@ -34,10 +42,12 @@ function BiographyPage() {
           festival Donaueschinger Musiktage, au festival l’Opéra Voyageur, au
           festival Musikfestspiel à Sarrebruck.
           <br />
+          <br />
           Depuis 2017, il enseigne l’accordéon au conservatoire de Strasbourg.
         </p>
       </article>
     </section>
+    </>
   );
 }
 

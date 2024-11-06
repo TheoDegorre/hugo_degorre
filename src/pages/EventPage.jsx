@@ -1,33 +1,31 @@
-import { Suspense } from "react";
 import EventCard from "../components/EventCard";
 import eventdata from "../eventdata";
-
+import background from "../assets/Vector.svg";
 function EventPage() {
-
   return (
-    <main className="event-page-container">
-      <h1>Les derniers évènements :</h1>
-      <section className="event-list-container">
-        <Suspense fallback={<Loading />}>
-        {eventdata
-            .map((el) => (
-              <EventCard
-                className="event-card"
-                key={el.date}
-                id={el.id}
-                date={el.date}
-                title={el.title}
-                city={el.city}
-              />
-            ))}
-        </Suspense>
-      </section>
-    </main>
+    <>
+      <main className="event-page-container">
+        <div id="event-background-container">
+          <img id="background" src={background} alt="" />
+        </div>
+        <h1>Dates à venir :</h1>
+        <div className="line" />
+        <section className="event-list-container">
+          {eventdata.map((el) => (
+            <EventCard
+              key={el.date}
+              id={el.id}
+              date={el.date}
+              title={el.title}
+              place={el.place}
+              adress={el.adress}
+              city={el.city}
+            />
+          ))}
+        </section>
+      </main>
+    </>
   );
-}
-
-function Loading() {
-  return <h2>🌀 Loading...</h2>;
 }
 
 export default EventPage;

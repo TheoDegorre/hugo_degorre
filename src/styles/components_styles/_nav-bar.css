@@ -1,13 +1,10 @@
 .navbar-container {
-  background-color: var(--light-bg-color);
+  position: sticky;
+  display: flex;
+  align-items: center;
   width: 100vw;
   height: 10vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
   top: 0px;
-  z-index: 6;
 }
 
 .logo-group {
@@ -17,7 +14,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1em;
 
     & #logo {
       width: 86px;
@@ -34,11 +30,11 @@
 }
 .nav-group {
   display: flex;
-  justify-content: space-around;
+  justify-content : center;
+  gap : 32px;
   align-items: center;
   width: 50%;
-  overflow-y: hidden;
-  margin-right: 10px;
+  height: 100%;
 
   & .nav-link {
     font-size: 18px;
