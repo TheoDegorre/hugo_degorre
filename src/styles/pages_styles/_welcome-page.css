@@ -75,7 +75,6 @@
   }
 
   .welcome-title-container {
-    border: solid pink 5px;
     position: absolute;
     flex-wrap: wrap;
     top:150px;
