@@ -30,26 +30,19 @@
   /* Font style */
   --signature-font-style: "Zeyada", cursive;
   --primary-font-style: "Poppins";
-  --font-size-h1: 42px;
-  --font-size-h2: 38px;
-  --font-size-h3: 32px;
-  --font-size-h4: 28px;
-  --font-size-text: 25px;
+
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: var(--dark-bg-color);
+  color: var(--dark-font-color);
+
   /* user-select: none; */
-  overflow-x: hidden;
 /* border: solid 1px black; */
 }
 
-/* * {
-  outline: 1px solid red;
-} */
 
 body {
   padding: 0;
