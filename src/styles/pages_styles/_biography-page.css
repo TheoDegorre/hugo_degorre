@@ -1,69 +1,62 @@
-/* -------------------- Desktop -------------------------- */
+/** -------------------- Desktop -------------------------- **/
 
 .biography-container {
-  width: 100vw;
-  height: 90vh;
+  height: 100vh;
   display: flex;
+  align-items: center;
   position: relative;
+}
 
-  & .biography-img-container {
-    display: flex;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-    padding : 32px;
+.biography-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    & .biography-img {
-      width: 100%;
-      object-fit: cover;
-    }
+  & .biography-img {
+    width: 75%;
+  }
+}
+
+.biography-description-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+
+  & .biography-description-text {
+    width: 90%;
+    height: 80%;
+    background-color: var(--medium-bg-color);
+    padding: 32px;
+
+    color: var(--light-font-color);
+  }
+}
+
+
+/** -------------------- Mobile -------------------------- **/
+
+@media screen and (max-width: 960px) {
+  .biography-container {
+    flex-direction: column;
+    gap : 16px;
   }
 
-  & .biography-description-container {
-    display: flex;
-    padding: 32px;
-    width: 45%;
+  .biography-img-container {
+    margin-top: 64px;
+  }
+  .biography-description-container{
+    width : 100%;
+    height: fit-content;
     background-color: var(--medium-bg-color);
 
-    & .biography-description-text {
-      color: var(--light-font-color)
-    }
-  }
-}
-
-
-#biography-background-container{
-  position : absolute;
-  width : 50vw;
-  height:80vh;;
-  left: -200px;
-  top:200px;
-  z-index:0; 
-  overflow: hidden;
-}
-
-
-& #background{
- width : 100%;
- height: 100%;
-}
-
-/* -------------------- Mobile -------------------------- */
-
-@media screen and (max-width: 480px) {
-  .biography-container {
-    & .biography-img-container {
+    & .biography-description-text{
+      padding: 8px 16px;
+      height: 100%;
       width: 100%;
-      height: 60%;
-    }
-
-    & .biography-description-container {
-      left: 10%;
-      width: 80%;
-
-      & .biography-description-text {
-        font-size: 0.5rem;
-      }
+      font-size: 0.8em;
+      
     }
   }
 }

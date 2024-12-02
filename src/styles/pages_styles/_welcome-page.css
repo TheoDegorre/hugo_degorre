@@ -75,10 +75,11 @@
   }
 
   .welcome-title-container {
+    flex-direction: column-reverse;
     position: absolute;
     flex-wrap: wrap;
-    top:150px;
-    right: 8px;
+    top:225px;
+    right:8px;
 
     & #title {
       display: none;
@@ -89,7 +90,7 @@
     }
 
     & #subtitle {
-      font-size: 18px;
+      font-size: 20px;
     }
   }
 

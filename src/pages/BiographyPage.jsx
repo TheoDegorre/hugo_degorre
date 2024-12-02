@@ -1,16 +1,15 @@
-import biography from "../assets/biography_page/hugo_biography.jpg";
-import background from "../assets/Vector.svg";
+import biography from "../assets/biography_page/hugo_biography 1.png";
+
 
 function BiographyPage() {
   return (
     <>
-      <div id="biography-background-container">
-        <img id="background" src={background} alt="" />
-      </div>
     <section className="biography-container">
+
       <figure className="biography-img-container">
         <img className="biography-img" src={biography} alt="" />
       </figure>
+
       <article className="biography-description-container">
         <p className="biography-description-text">
           C’est en 2016 qu’Hugo Degorre obtient son DEM d’accordéon dans la
