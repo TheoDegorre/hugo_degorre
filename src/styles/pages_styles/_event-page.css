@@ -1,51 +1,42 @@
+/** -------------------- Desktop -------------------- **/
+
 .event-page-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100dvh;
-  
-  & #event-background-container{
-    position : absolute;
-    width : 50vw;
-    height:100vh;;
-    right: -200px;
-    top:200px;
-    z-index:0; 
-    overflow: hidden;
-  }
-  
-  & #background{
-   width : 80%;
-   height: 80%;
-  
-  }
+  padding-top: 64px;
 }
 
-.line {
-  width: 360px;
-  height: 2px;
-  background: linear-gradient(90deg, #c2bdb7 0%, #292524 50%, #c2bdb7 100%);
+.event-page-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & .line {
+    width: 360px;
+    height: 2px;
+    background: linear-gradient(90deg, #c2bdb7 0%, #292524 50%, #c2bdb7 100%);
+  }
 }
 
 .event-list-container {
-  display : flex;
-  position: relative;
-  flex-direction:column;
-  gap : 2rem;
-  margin: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 32px;
   padding: 32px;
+  width: 90%;
+
   background-color: var(--medium-bg-color);
-  width: 80%;
-  height: fit-content;
 }
 
-/* ----------- */
+/* ----- Event componant------ */
 
 .event-card-container {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   gap: 2rem;
-  padding-left: 128px;
 }
 
 .event-date-container {
@@ -54,27 +45,72 @@
   align-items: center;
   justify-content: center;
   width: 145px;
-  
-  & #event-card-day,
+
+  & #event-card-day {
+    color: var(--light-font-color);
+    font-weight: 800;
+  }
   #event-card-date {
     color: var(--light-font-color);
+    font-weight: 400;
   }
 }
 
 .event-detail-container {
   display: flex;
   width: 70%;
-  
   flex-direction: column;
   align-items: start;
-  text-overflow: ellipsis;
 
   & #event-card-title {
     color: var(--light-font-color);
+    font-weight: 800;
   }
 
   & #event-card-subtitle {
     color: var(--light-font-color);
+    font-weight: 400;
   }
 }
 
+/** -------------------- Mobile -------------------- **/
+
+@media screen and (max-width: 960px) {
+  .event-page-title {
+      
+    & .line {
+      width: 180px;
+      height: 2px;
+    }
+
+    & h1{
+      font-size: 22px;
+    }
+  }
+
+  .event-card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    gap: 1em;
+  }
+
+
+  .event-detail-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+  
+    & #event-card-title {
+      color: var(--light-font-color);
+      font-weight: 800;
+    }
+  
+    & #event-card-subtitle {
+      color: var(--light-font-color);
+      font-weight: 400;
+    }
+  }
+}
