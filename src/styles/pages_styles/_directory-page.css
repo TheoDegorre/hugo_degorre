@@ -1,6 +1,33 @@
 .directory-page-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding-top: 64px;
+  gap: 16px;
+}
+
+.directory-page-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & .line {
+    width: 360px;
+    height: 2px;
+    background: linear-gradient(90deg, #c2bdb7 0%, #292524 50%, #c2bdb7 100%);
+  }
+}
+
+
+.directory-img-container {
+  width: 550px;
+
+  & .directory-img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .directory-page-section {
@@ -8,29 +35,104 @@
   width: 60%;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
+  background-color: var(--medium-bg-color);
+
+  & #search-bar {
+    width: 400px;
+    height: 32px;
+    margin: 32px;
+    border-radius: 12px;
+  }
+
+  & .directory-content-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: var(--white-font-color);
+  }
 }
 
-.directory-content-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.search-bar {
-  width: 20em;
-  margin: 32px;
-}
+/* ----- Directory component ----- */
 
 .directory-card-detail {
   display: flex;
   gap: 16px;
+  
+}
+
+.directory-card-container {
+  color: white;
+  display: flex;
+  margin: 8px;
 }
 
 #directory-instrumentation {
   font-size: 0.7rem;
   background-color: var(--accent-font-color);
-  color: white;
+  color:var(--light-font-color);
   padding: 0.5em;
   border-radius: 10px;
+}
+
+#project-card-composer {
+  width: 15em;
+  color:var(--ligth-font-color);
+}
+
+#project-card-title{
+  color:white;
+}
+
+#directory-category{
+  color:var(--light-font-color);
+}
+
+@media screen and (max-width: 960px) {
+  .directory-page-title {
+      
+    & .line {
+      width: 180px;
+    }
+
+    & h1{
+      font-size: 22px;
+    }
+  }
+
+  .directory-img-container {
+    width: 300px;
+  }
+
+  .directory-page-section {
+    width: 90%;
+    padding: 16px;
+  
+    & #search-bar {
+      width: 200px;
+    }
+  
+    & .directory-content-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      color: var(--white-font-color);
+    }
+  }
+
+  .directory-card-detail {
+    display: flex;
+    gap: 16px;
+    
+  }
+  
+  .directory-card-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+  }
+ 
+  #project-card-composer{
+    font-size: 24px;
+    width: 100%;
+  }
 }

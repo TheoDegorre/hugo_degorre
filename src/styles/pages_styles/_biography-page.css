@@ -5,6 +5,14 @@
   display: flex;
   align-items: center;
   position: relative;
+
+  /* --- background shape --- */
+  background-origin: border-box;
+  background-image: url(../../assets/Vector.svg);
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: top 250px left -100px;
+
 }
 
 .biography-img-container {

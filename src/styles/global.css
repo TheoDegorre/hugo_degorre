@@ -9,7 +9,6 @@
 /* import des styles composants */
 @import "./components_styles/_nav-bar.css";
 @import "./components_styles/_footer.css";
-@import "./components_styles/_directory-card.css";
 
 /* import font style */
 @import url("https://fonts.googleapis.com/css2?family=Zeyada&display=swap");
@@ -20,7 +19,7 @@
   --white-bg-color: oklch(90% 0.01 75);
   --ligth-bg-color: oklch(60% 0.01 75);
   --medium-bg-color: oklch(40% 0.01 75);
-  --dark-bg-color:oklch(20% 0.01 75);
+  --dark-bg-color:oklch(20% 0.01 75); 
 
   /* Font colors */
   --light-font-color: oklch(90% 0.01 75);

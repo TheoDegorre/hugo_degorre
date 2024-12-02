@@ -1,6 +1,7 @@
 import { useState } from "react";
 import DirectoryCard from "../components/DirectoryCard";
 import directorydata from "../directorydata";
+import directoryImg from "../assets/directory_page/directory_img.png";
 
 function DirectoryPage() {
   const directoryList = directorydata;
@@ -20,9 +21,18 @@ function DirectoryPage() {
 
   return (
     <main className="directory-page-container">
+      <hgroup className="directory-page-title">
+        <h1>Repertoire :</h1>
+        <div className="line" />
+      </hgroup>
+
+      <figure className="directory-img-container">
+        <img className="directory-img" src={directoryImg} alt="" />
+      </figure>
+
       <section className="directory-page-section">
         <input
-          className="search-bar"
+          id="search-bar"
           type="text"
           placeholder=" Recherchez un morceau ou un compositeur"
           alt="barre de recherche"
