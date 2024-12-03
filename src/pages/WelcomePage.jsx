@@ -1,4 +1,4 @@
-import landing from "../assets/welcome_page/welcome_page-removebg.png";
+import landing from "../assets/welcome_page/welcome_page-removebg-1.webp";
 // import background from "../assets/Vector.svg";
 
 function WelcomePage() {
